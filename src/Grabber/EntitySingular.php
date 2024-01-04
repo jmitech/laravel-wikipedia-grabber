@@ -82,6 +82,31 @@ abstract class EntitySingular extends Entity
     }
 
     /**
+     * Get the links.
+     */
+    public function getLinks(): array|null
+    {
+        if (!$this->isSuccess()) {
+            return null;
+        }
+
+        return $this->response['links'];
+    }
+
+
+    /**
+     * Get the info.
+     */
+    public function getUrl(): string|null
+    {
+        if (!$this->isSuccess()) {
+            return null;
+        }
+
+        return $this->response['fullurl'];
+    }
+
+    /**
      * Get the content in plain format.
      */
     public function plain(): string
