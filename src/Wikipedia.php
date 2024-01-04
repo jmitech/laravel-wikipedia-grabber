@@ -17,7 +17,7 @@ class Wikipedia extends Grabber
     public function __construct(string $lang = 'en')
     {
         throw_unless(
-            in_array($lang, ['en', 'ru']),
+            in_array($lang, ['en', 'fr', 'es']),
             new InvalidArgumentException("The given language (`{$lang}`) is not supported.")
         );
 
