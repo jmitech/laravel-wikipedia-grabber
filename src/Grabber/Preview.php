@@ -51,6 +51,12 @@ class Preview extends EntitySingular
         $prop->push('pageprops');
         $params->put('ppprop', 'disambiguation');
 
+        $prop->push('links');
+        $params->put('pllimit', 25);
+
+        $prop->push('info');
+        $params->put('inprop', 'url');
+
         $prop->push('extracts');
         $params->put('exlimit', 1);
         $params->put('exintro', true);
