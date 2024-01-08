@@ -66,7 +66,7 @@ abstract class EntitySingular extends Entity
             return null;
         }
 
-        return $this->response['pageid'];
+        return $this->response['pageid']? $this->response['pageid'] : null;
     }
 
     /**
@@ -78,7 +78,7 @@ abstract class EntitySingular extends Entity
             return null;
         }
 
-        return $this->response['title'];
+        return $this->response['title']? $this->response['title'] : null;
     }
 
     /**
@@ -90,7 +90,7 @@ abstract class EntitySingular extends Entity
             return null;
         }
 
-        return $this->response['links'];
+        return $this->response['links']? $this->response['links']: null;
     }
 
 
@@ -103,7 +103,7 @@ abstract class EntitySingular extends Entity
             return null;
         }
 
-        return $this->response['fullurl'];
+        return $this->response['fullurl']? $this->response['fullurl'] : null;
     }
 
     /**
