@@ -138,9 +138,11 @@ class SectionsAddImages
      */
     protected function skipMainImage(array $images): array
     {
-        return collect($images)->filter(function (array $image) {
-            return !(Arr::get($image, 'imageinfo.0.url') == $this->mainImage['original']['source']);
-        })->toArray();
+        if ($this->mainImage)
+            return collect($images)->filter(function (array $image) {
+                return !(Arr::get($image, 'imageinfo.0.url') == $this->mainImage['original']['source']);
+            })->toArray();
+        return [];
     }
 
     /**
